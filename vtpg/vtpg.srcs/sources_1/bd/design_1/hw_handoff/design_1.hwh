@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jul  5 19:04:28 2015" VIVADOVERSION="2014.4">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z030" NAME="design_1_imp" PACKAGE="fbg676" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="External_Ports_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="v_tpg_0" PORT="aresetn"/>
+        <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="aresetn"/>
+        <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="ap_rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="aclken" SIGIS="ce" SIGNAME="External_Ports_aclken">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="v_tpg_0" PORT="aclken"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="19200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="v_tpg_0" PORT="aclk"/>
+        <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="dst_V_V_tvalid" SIGIS="undef"/>
+    <PORT DIR="I" NAME="dst_V_V_tready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="63" NAME="dst_V_V_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="0" NAME="sof_o" RIGHT="0" SIGIS="data" SIGNAME="hls_synchr_strm_1_start_sigo">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="start_sigo"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <MODULES>
+    <MODULE FULLNAME="/axis_dwidth_converter_0" HWVERSION="1.1" INSTANCE="axis_dwidth_converter_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_dwidth_converter" VLNV="xilinx.com:ip:axis_dwidth_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_infrastructure_ip_suite;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="40"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010010011"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="5"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="8"/>
+        <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TUSER_BITS_PER_BYTE" VALUE="1"/>
+        <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="HAS_MI_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_axis_dwidth_converter_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="19200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="External_Ports_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="39" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tuser &amp; v_tpg_0_m_axis_video_tuser &amp; v_tpg_0_m_axis_video_tuser &amp; v_tpg_0_m_axis_video_tuser &amp; v_tpg_0_m_axis_video_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tuser"/>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tuser"/>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tuser"/>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tuser"/>
+            <CONNECTION INSTANCE="v_tpg_0" PORT="m_axis_video_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="src_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="hls_synchr_strm_1_src_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="src_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="src_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_reduced_logic_0" PORT="Op1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS" TYPE="SLAVE">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="s_axis_tvalid"/>
+            <PORTMAP PHYSICAL="s_axis_tready"/>
+            <PORTMAP PHYSICAL="s_axis_tdata"/>
+            <PORTMAP PHYSICAL="s_axis_tlast"/>
+            <PORTMAP PHYSICAL="s_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="M_AXIS" TYPE="MASTER">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="m_axis_tvalid"/>
+            <PORTMAP PHYSICAL="m_axis_tready"/>
+            <PORTMAP PHYSICAL="m_axis_tdata"/>
+            <PORTMAP PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP PHYSICAL="m_axis_tlast"/>
+            <PORTMAP PHYSICAL="m_axis_tuser"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/hls_synchr_strm_1" HWVERSION="1.0" INSTANCE="hls_synchr_strm_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hls_synchr_strm" VLNV="xilinx.com:hls:hls_synchr_strm:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_hls_synchr_strm_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="start_sigo_ap_vld" SIGIS="undef"/>
+        <PORT DIR="I" NAME="src_V_V_TVALID" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="src_V_V_TREADY" SIGIS="undef" SIGNAME="hls_synchr_strm_1_src_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="src_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dst_V_V_TVALID" SIGIS="undef"/>
+        <PORT DIR="I" NAME="dst_V_V_TREADY" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="63" NAME="dst_V_V_TDATA" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="start_sig" RIGHT="0" SIGIS="data" SIGNAME="util_reduced_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_reduced_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="start_sigo" RIGHT="0" SIGIS="data" SIGNAME="hls_synchr_strm_1_start_sigo">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sof_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="19200000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="External_Ports_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="src_V_V" TYPE="TARGET">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="src_V_V_TVALID"/>
+            <PORTMAP PHYSICAL="src_V_V_TREADY"/>
+            <PORTMAP PHYSICAL="src_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="hls_synchr_strm_1_dst_V_V" NAME="dst_V_V" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="dst_V_V_TVALID"/>
+            <PORTMAP PHYSICAL="dst_V_V_TREADY"/>
+            <PORTMAP PHYSICAL="dst_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/util_reduced_logic_0" HWVERSION="2.0" INSTANCE="util_reduced_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_reduced_logic" VLNV="xilinx.com:ip:util_reduced_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="and"/>
+        <PARAMETER NAME="C_SIZE" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_util_reduced_logic_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Res" SIGIS="undef" SIGNAME="util_reduced_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hls_synchr_strm_1" PORT="start_sig"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/v_tpg_0" HWVERSION="6.0" INSTANCE="v_tpg_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="v_tpg" VLNV="xilinx.com:ip:v_tpg:6.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=v_tpg;v=v6_0;d=pg103-v-tpg.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S_AXIS_VIDEO_DATA_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_M_AXIS_VIDEO_DATA_WIDTH" VALUE="12"/>
+        <PARAMETER NAME="C_S_AXIS_VIDEO_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_VIDEO_TDATA_WIDTH" VALUE="40"/>
+        <PARAMETER NAME="C_S_AXIS_VIDEO_FORMAT" VALUE="0"/>
+        <PARAMETER NAME="C_M_AXIS_VIDEO_FORMAT" VALUE="2"/>
+        <PARAMETER NAME="C_S_AXIS_VIDEO_TUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="C_M_AXIS_VIDEO_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_CLK_FREQ_HZ" VALUE="100000000"/>
+        <PARAMETER NAME="C_ACTIVE_ROWS" VALUE="768"/>
+        <PARAMETER NAME="C_ACTIVE_COLS" VALUE="64"/>
+        <PARAMETER NAME="C_PATTERN_CONTROL" VALUE="4111"/>
+        <PARAMETER NAME="C_MOTION_SPEED" VALUE="0"/>
+        <PARAMETER NAME="C_CROSS_HAIRS" VALUE="6553700"/>
+        <PARAMETER NAME="C_ZPLATE_HOR_CONTROL" VALUE="30"/>
+        <PARAMETER NAME="C_ZPLATE_VER_CONTROL" VALUE="1"/>
+        <PARAMETER NAME="C_BOX_SIZE" VALUE="50"/>
+        <PARAMETER NAME="C_BOX_COLOR" VALUE="0"/>
+        <PARAMETER NAME="C_STUCK_PIXEL_THRESH" VALUE="0"/>
+        <PARAMETER NAME="C_NOISE_GAIN" VALUE="0"/>
+        <PARAMETER NAME="C_BAYER_PHASE" VALUE="4"/>
+        <PARAMETER NAME="C_HAS_INTC_IF" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_AXI4_LITE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VTIMING" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_v_tpg_0_0"/>
+        <PARAMETER NAME="has_axi4_lite" VALUE="false"/>
+        <PARAMETER NAME="has_axi4s_slave" VALUE="false"/>
+        <PARAMETER NAME="has_intc_if" VALUE="false"/>
+        <PARAMETER NAME="has_vtiming" VALUE="false"/>
+        <PARAMETER NAME="data_width" VALUE="12"/>
+        <PARAMETER NAME="pattern_control" VALUE="15"/>
+        <PARAMETER NAME="active_cols" VALUE="64"/>
+        <PARAMETER NAME="active_rows" VALUE="768"/>
+        <PARAMETER NAME="s_video_format" VALUE="0"/>
+        <PARAMETER NAME="m_video_format" VALUE="2"/>
+        <PARAMETER NAME="bayer_phase" VALUE="4"/>
+        <PARAMETER NAME="enable_motion" VALUE="true"/>
+        <PARAMETER NAME="motion_speed" VALUE="0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="19200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aclken" SIGIS="ce" SIGNAME="External_Ports_aclken">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclken"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="External_Ports_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="m_axis_video_tdata" RIGHT="0" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_video_tvalid" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_video_tready" SIGIS="undef" SIGNAME="axis_dwidth_converter_0_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_video_tlast" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_video_tuser" SIGIS="undef" SIGNAME="v_tpg_0_m_axis_video_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tuser"/>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tuser"/>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tuser"/>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tuser"/>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="video_out" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="m_axis_video_tdata"/>
+            <PORTMAP PHYSICAL="m_axis_video_tlast"/>
+            <PORTMAP PHYSICAL="m_axis_video_tready"/>
+            <PORTMAP PHYSICAL="m_axis_video_tuser"/>
+            <PORTMAP PHYSICAL="m_axis_video_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+  <REPOSITORIES/>
+
+</EDKSYSTEM>

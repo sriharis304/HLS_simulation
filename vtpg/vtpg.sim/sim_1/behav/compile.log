@@ -1,0 +1,49 @@
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/daf00b91/hdl/src/vhdl/ipif_pkg.vhd" into library axi_lite_ipif_v3_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/daf00b91/hdl/src/vhdl/pselect_f.vhd" into library axi_lite_ipif_v3_0
+INFO: [VRFC 10-307] analyzing entity pselect_f
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/daf00b91/hdl/src/vhdl/address_decoder.vhd" into library axi_lite_ipif_v3_0
+INFO: [VRFC 10-307] analyzing entity address_decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/daf00b91/hdl/src/vhdl/slave_attachment.vhd" into library axi_lite_ipif_v3_0
+INFO: [VRFC 10-307] analyzing entity slave_attachment
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/axi_lite_ipif_v3_0/daf00b91/hdl/src/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v3_0
+INFO: [VRFC 10-307] analyzing entity axi_lite_ipif
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/v_tc_v6_1/51f55007/hdl/v_tc_v6_1_vh_rfs.vhd" into library v_tc_v6_1
+INFO: [VRFC 10-307] analyzing entity axi4s_control
+INFO: [VRFC 10-307] analyzing entity tc_generator
+INFO: [VRFC 10-307] analyzing entity tc_detector
+INFO: [VRFC 10-307] analyzing entity video_clock_cross
+INFO: [VRFC 10-307] analyzing entity hwt
+INFO: [VRFC 10-307] analyzing entity TimeoutTest
+INFO: [VRFC 10-307] analyzing entity mux_tree
+INFO: [VRFC 10-307] analyzing entity video_ctrl
+INFO: [VRFC 10-307] analyzing entity debug
+INFO: [VRFC 10-307] analyzing entity tc_top
+INFO: [VRFC 10-307] analyzing entity v_tc
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/v_tpg_v6_0/69e065b5/hdl/v_tpg_v6_0_vh_rfs.vhd" into library v_tpg_v6_0
+INFO: [VRFC 10-307] analyzing entity DELAY
+INFO: [VRFC 10-307] analyzing entity delay_sclr
+INFO: [VRFC 10-307] analyzing entity radd_sub_sclr_no
+INFO: [VRFC 10-307] analyzing entity get_round_addend
+INFO: [VRFC 10-307] analyzing entity mac
+INFO: [VRFC 10-307] analyzing entity dpram
+INFO: [VRFC 10-307] analyzing entity reciprocal
+INFO: [VRFC 10-307] analyzing entity dp_ram
+INFO: [VRFC 10-307] analyzing entity synch_fifo
+INFO: [VRFC 10-307] analyzing entity synch_fifo_fallthru
+INFO: [VRFC 10-307] analyzing entity zplate
+INFO: [VRFC 10-307] analyzing entity prng
+INFO: [VRFC 10-307] analyzing entity awgn_cos
+INFO: [VRFC 10-307] analyzing entity awgn_ln
+INFO: [VRFC 10-307] analyzing entity axis_input_buffer
+INFO: [VRFC 10-307] analyzing entity axis_output_buffer
+INFO: [VRFC 10-307] analyzing entity axi4s_control_local
+INFO: [VRFC 10-307] analyzing entity tpg_core
+INFO: [VRFC 10-307] analyzing entity tpg_top
+INFO: [VRFC 10-307] analyzing entity v_tpg
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/sim/design_1_v_tpg_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_v_tpg_0_0
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/ipshared/xilinx.com/util_reduced_logic_v2_0/9a45c896/hdl/util_reduced_logic.vhd" into library util_reduced_logic_v2_0
+INFO: [VRFC 10-307] analyzing entity util_reduced_logic
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/subhagato/Codes/smartheadlight_fpga/srihari_vtpg_64X728_with_dw/vtpg/vtpg.srcs/sources_1/bd/design_1/ip/design_1_util_reduced_logic_0_0/sim/design_1_util_reduced_logic_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity design_1_util_reduced_logic_0_0
